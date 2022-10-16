@@ -2,5 +2,12 @@
 Crude Oil Price Prediction
 Problem Statement:
 As the most important strategic resource around the globe, crude oil is the “key” commodity for the world’s economy. Therefore, forecasting it has been challenging as many events influence its price, so it is very hard to forecast its prices. Crude oil price suffers from high volatility and fluctuations. Recently many studies occurred to discuss the problem of predicting oil prices and seeking access to the best results. Forecasting its needs will be helpful for our government, Companies, and Investors. This project involves creating an artificial neural network (ANN) to predict the price of crude oil. In this project, we propose a novel approach for crude oil price prediction based on artificial.
-
+The price of crude oil has a significant impact on
+the environment globally, and its forecasts are
+particularly helpful to governments and
+industry. Crude oil is the most widely used fuel
+in the world. The ongoing application of
+statistics and econometric methods for crude
+oil, including AI Price forecasting could show
+reductions in the accuracy of the prediction
 I am raj an investor need to the price of the crude oil in future so that it will be helpful for me to find best opportunities.
