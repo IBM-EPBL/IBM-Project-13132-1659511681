@@ -16,6 +16,17 @@ header = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + mltok
 app = Flask(__name__)
 
 @app.route('/',methods=["GET"])
+
+
+url = 'https://api.oilpriceapi.com/v1/prices/latest'
+headers = {
+  'Authorization': 'Token Live_crude_oil_price_key',
+  'Content-Type': 'application/json'
+}
+
+response = requests.get(url = url, headers = headers)
+data = response.json()
+print(data)
 def index():
     return render_template('index.html')
 
@@ -60,7 +71,10 @@ def predict():
 	print(response_scoring.json())
 	
 	val = lst_output[9]
-	return render_template('web.html' , prediction = val)
+	live_price=data['data']['formatted']
+	"""{'status': 'success', 'data': {'price': 94.17, 'formatted': '$94.17', 'currency': 'USD', 'code': 'BRENT_CRUDE_USD', 'created_at': '2022-11-16T12:24:05.754Z', 'type': 'spot_price'}}
+        """
+	return render_template('web.html' , prediction = val,liv=live_price)
     
     
     if request.method=="GET":
@@ -69,3 +83,4 @@ def predict():
 if __name__=="__main__":
     model = load_model('C:/Users/rkara/IBM/Sprint - 4/Crude_oil.tar.gz')
     app.run(debug=True)
+
